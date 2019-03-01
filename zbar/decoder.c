@@ -24,6 +24,7 @@
 #include <config.h>
 #include <stdlib.h>     /* malloc, calloc, free */
 #include <stdio.h>      /* snprintf */
+#include <stdint.h>     /* intptr_t */
 #include <string.h>     /* memset, strlen */
 
 #include <zbar.h>
