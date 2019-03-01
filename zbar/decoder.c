@@ -109,7 +109,7 @@ void zbar_decoder_destroy (zbar_decoder_t *dcode)
 
 void zbar_decoder_reset (zbar_decoder_t *dcode)
 {
-    memset(dcode, 0, (long)&dcode->buf_alloc - (long)dcode);
+    memset(dcode, 0, (intptr_t)&dcode->buf_alloc - (intptr_t)dcode);
 #ifdef ENABLE_EAN
     ean_reset(&dcode->ean);
 #endif
