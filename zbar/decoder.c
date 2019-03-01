@@ -24,6 +24,9 @@
 #include <config.h>
 #include <stdlib.h>     /* malloc, calloc, free */
 #include <stdio.h>      /* snprintf */
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L)
+    #include <stdint.h>     /* intptr_t */
+#endif
 #include <string.h>     /* memset, strlen */
 
 #include <zbar.h>
@@ -109,7 +112,11 @@ void zbar_decoder_destroy (zbar_decoder_t *dcode)
 
 void zbar_decoder_reset (zbar_decoder_t *dcode)
 {
+#ifdef INTPTR_MIN
+    memset(dcode, 0, (intptr_t)&dcode->buf_alloc - (intptr_t)dcode);
+#else
     memset(dcode, 0, (long)&dcode->buf_alloc - (long)dcode);
+#endif
 #ifdef ENABLE_EAN
     ean_reset(&dcode->ean);
 #endif
