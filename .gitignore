@@ -10,12 +10,9 @@
 *.opensdf
 *.res
 *.sdf
-*.sln
 *.suo
 *.tds
 *.user
-*.vcproj
-*.vcxproj
 *~
 .vs
 CMakeCache.txt
