@@ -17,8 +17,8 @@ check_include_file(sys/time.h HAVE_SYS_TIME_H)
 check_include_file(sys/types.h HAVE_SYS_TYPES_H)
 check_include_file(unistd.h HAVE_UNISTD_H)
 check_include_file(setjmp.h HAVE_LONGJMP)
+check_include_file(pthread.h HAVE_LIBPTHREAD)
 
-# HAVE_LIBPTHREAD
 # HAVE_THREADS @HAVE_THREADS
 # HAVE_X11_EXTENSIONS_XSHM_H
 # HAVE_X11_EXTENSIONS_XVLIB_H
