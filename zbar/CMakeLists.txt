@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(zbar)
+# project name and languages
+project(zbar LANGUAGES C VERSION 2.0.2)
 
 include(CheckIncludeFile)
 
