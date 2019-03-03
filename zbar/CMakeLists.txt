@@ -24,8 +24,8 @@ if (Threads_FOUND)
     set(HAVE_THREADS 1)
 endif()
 
-# HAVE_X11_EXTENSIONS_XSHM_H
-# HAVE_X11_EXTENSIONS_XVLIB_H
+check_include_file(X11/extensions/XShm.h HAVE_X11_EXTENSIONS_XSHM_H)
+check_include_file(X11/extensions/Xvlib.h HAVE_X11_EXTENSIONS_XVLIB_H)
 
 include_directories(.)
 
