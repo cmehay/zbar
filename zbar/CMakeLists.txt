@@ -2,13 +2,6 @@ cmake_minimum_required(VERSION 3.12)
 
 project(zbar)
 
-set(PACKAGE_VERSION 0.10)
-set(ZBAR_VERSION_MAJOR 0)
-set(ZBAR_VERSION_MINOR 10)
-set(LIB_VERSION_MAJOR 2)
-set(LIB_VERSION_MINOR 0)
-set(LIB_VERSION_REVISION 2)
-
 include(CheckIncludeFile)
 
 check_include_file(errno.h HAVE_ERRNO_H)

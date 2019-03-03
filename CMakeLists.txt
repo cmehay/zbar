@@ -8,4 +8,12 @@ endif(COMMAND cmake_policy)
 # project name and language
 project(zbar LANGUAGES C VERSION 2.0.2)
 
+# version info
+set(PACKAGE_VERSION 0.10)
+set(ZBAR_VERSION_MAJOR 0)
+set(ZBAR_VERSION_MINOR 10)
+set(LIB_VERSION_MAJOR 2)
+set(LIB_VERSION_MINOR 0)
+set(LIB_VERSION_REVISION 2)
+
 subdirs(zbar)
