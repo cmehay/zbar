@@ -61,7 +61,7 @@ if (WIN32)
     option(HAVE_VIDEO "Have VIDEO" ON)
 else()
     option(HAVE_VIDEO "Have VIDEO" OFF)
-endif
+endif()
 
 find_package(X11)
 find_package(JPEG)
