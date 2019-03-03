@@ -19,7 +19,11 @@ check_include_file(unistd.h HAVE_UNISTD_H)
 check_include_file(setjmp.h HAVE_LONGJMP)
 check_include_file(pthread.h HAVE_LIBPTHREAD)
 
-# HAVE_THREADS @HAVE_THREADS
+find_package(Threads)
+if (Threads_FOUND)
+    set(HAVE_THREADS 1)
+endif()
+
 # HAVE_X11_EXTENSIONS_XSHM_H
 # HAVE_X11_EXTENSIONS_XVLIB_H
 
