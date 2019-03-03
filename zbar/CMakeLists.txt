@@ -57,7 +57,11 @@ option(ENABLE_PDF417 "Use PDF417" ON)
 option(ENABLE_QRCODE "Use QRCode" ON)
 option(HAVE_V4L2 "Have V4L2" OFF)
 option(HAVE_V4L1 "Have V4L1" OFF)
-option(HAVE_VIDEO "Have VIDEO" OFF)
+if (WIN32)
+    option(HAVE_VIDEO "Have VIDEO" ON)
+else()
+    option(HAVE_VIDEO "Have VIDEO" OFF)
+endif
 
 find_package(X11)
 find_package(JPEG)
