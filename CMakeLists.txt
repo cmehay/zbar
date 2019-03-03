@@ -6,6 +6,6 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 # project name and language
-project(zbar LANGUAGES CXX VERSION 2.0.2)
+project(zbar LANGUAGES C VERSION 2.0.2)
 
 subdirs(zbar)
