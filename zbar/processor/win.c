@@ -279,7 +279,7 @@ int _zbar_processor_open (zbar_processor_t *proc,
 
     RECT r = { 0, 0, width, height };
     AdjustWindowRectEx(&r, WIN_STYLE, 0, EXT_STYLE);
-    proc->display = CreateWindowEx(EXT_STYLE, (LPCTSTR)(long)wca,
+    proc->display = CreateWindowEx(EXT_STYLE, (LPCTSTR)(LONG_PTR)wca,
                                    "ZBar", WIN_STYLE,
                                    CW_USEDEFAULT, CW_USEDEFAULT,
                                    r.right - r.left, r.bottom - r.top,
